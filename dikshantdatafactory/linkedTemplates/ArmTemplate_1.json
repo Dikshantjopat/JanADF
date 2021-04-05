@@ -74,13 +74,15 @@
 				},
 				"parameters": {
 					"TableName": {
-						"type": "string"
+						"type": "string",
+						"defaultValue": "{@item().name}"
 					}
 				},
 				"annotations": [],
 				"type": "AzureSqlTable",
 				"schema": [],
 				"typeProperties": {
+					"schema": "dbo",
 					"table": {
 						"value": "@dataset().TableName",
 						"type": "Expression"
