@@ -23,6 +23,9 @@
 		"AzureSqlDatabase3_connectionString": {
 			"value": ""
 		},
+		"AzureSqlDatabase4_connectionString": {
+			"value": ""
+		},
 		"AzureSqlDatabaseLS_connectionString": {
 			"value": ""
 		},
@@ -38,6 +41,12 @@
 		"AzureStorageLinkedService_connectionString": {
 			"value": ""
 		},
+		"ConnectionToADV2012_connectionString": {
+			"value": ""
+		},
+		"ConnectionToADV2012_password": {
+			"value": ""
+		},
 		"DikshantLinked_connectionString": {
 			"value": ""
 		},
@@ -49,6 +58,9 @@
 		},
 		"AzureDataLakeStorageLS_properties_typeProperties_url": {
 			"value": "https://dikshantstrgacc.dfs.core.windows.net"
+		},
+		"ConnectionToADV2012_properties_typeProperties_userName": {
+			"value": "Lenovo"
 		},
 		"SqlServer1_properties_typeProperties_userName": {
 			"value": "Lenovo"

@@ -31,6 +31,10 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'AzureSqlDatabase3'"
 		},
+		"AzureSqlDatabase4_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'AzureSqlDatabase4'"
+		},
 		"AzureSqlDatabaseLS_connectionString": {
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'AzureSqlDatabaseLS'"
@@ -51,6 +55,14 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'AzureStorageLinkedService'"
 		},
+		"ConnectionToADV2012_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'ConnectionToADV2012'"
+		},
+		"ConnectionToADV2012_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'ConnectionToADV2012'"
+		},
 		"DikshantLinked_connectionString": {
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'DikshantLinked'"
@@ -66,6 +78,10 @@
 		"AzureDataLakeStorageLS_properties_typeProperties_url": {
 			"type": "string",
 			"defaultValue": "https://dikshantstrgacc.dfs.core.windows.net"
+		},
+		"ConnectionToADV2012_properties_typeProperties_userName": {
+			"type": "string",
+			"defaultValue": "Lenovo"
 		},
 		"SqlServer1_properties_typeProperties_userName": {
 			"type": "string",
@@ -116,6 +132,9 @@
 					"AzureSqlDatabase3_connectionString": {
 						"value": "[parameters('AzureSqlDatabase3_connectionString')]"
 					},
+					"AzureSqlDatabase4_connectionString": {
+						"value": "[parameters('AzureSqlDatabase4_connectionString')]"
+					},
 					"AzureSqlDatabaseLS_connectionString": {
 						"value": "[parameters('AzureSqlDatabaseLS_connectionString')]"
 					},
@@ -155,11 +174,20 @@
 					"factoryName": {
 						"value": "[parameters('factoryName')]"
 					},
+					"ConnectionToADV2012_connectionString": {
+						"value": "[parameters('ConnectionToADV2012_connectionString')]"
+					},
+					"ConnectionToADV2012_password": {
+						"value": "[parameters('ConnectionToADV2012_password')]"
+					},
 					"SqlServer1_connectionString": {
 						"value": "[parameters('SqlServer1_connectionString')]"
 					},
 					"SqlServer1_password": {
 						"value": "[parameters('SqlServer1_password')]"
+					},
+					"ConnectionToADV2012_properties_typeProperties_userName": {
+						"value": "[parameters('ConnectionToADV2012_properties_typeProperties_userName')]"
 					},
 					"SqlServer1_properties_typeProperties_userName": {
 						"value": "[parameters('SqlServer1_properties_typeProperties_userName')]"
