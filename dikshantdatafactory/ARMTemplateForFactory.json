@@ -638,7 +638,7 @@
 											"type": "DatasetReference",
 											"parameters": {
 												"TableName": {
-													"value": "{@item().name}",
+													"value": "@item().name",
 													"type": "Expression"
 												}
 											}
@@ -1524,8 +1524,7 @@
 				},
 				"parameters": {
 					"TableName": {
-						"type": "string",
-						"defaultValue": "{@item().name}"
+						"type": "string"
 					}
 				},
 				"annotations": [],
@@ -2065,7 +2064,8 @@
 				"type": "SqlServerTable",
 				"schema": [],
 				"typeProperties": {
-					"schema": ""
+					"schema": "HumanResources",
+					"table": "Department"
 				}
 			},
 			"dependsOn": [
@@ -2084,7 +2084,10 @@
 				"annotations": [],
 				"type": "SqlServerTable",
 				"schema": [],
-				"typeProperties": {}
+				"typeProperties": {
+					"schema": "HumanResources",
+					"table": "EmployeeDepartmentHistory"
+				}
 			},
 			"dependsOn": [
 				"[concat(variables('factoryId'), '/linkedServices/ConnectionToADV2012')]"

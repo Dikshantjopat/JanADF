@@ -74,8 +74,7 @@
 				},
 				"parameters": {
 					"TableName": {
-						"type": "string",
-						"defaultValue": "{@item().name}"
+						"type": "string"
 					}
 				},
 				"annotations": [],
