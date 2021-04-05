@@ -1,0 +1,9 @@
+{
+	"name": "dikshantdatafactory",
+	"location": "eastus2",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "b8111b42-2048-424c-b2dc-b6385a87de04",
+		"tenantId": "ed9e8eb8-727c-4ce7-a3fb-0c3b5e7d0809"
+	}
+}

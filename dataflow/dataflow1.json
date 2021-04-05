@@ -1,0 +1,32 @@
+{
+	"name": "dataflow1",
+	"properties": {
+		"type": "MappingDataFlow",
+		"typeProperties": {
+			"sources": [
+				{
+					"dataset": {
+						"referenceName": "AzureSqlTable1",
+						"type": "DatasetReference"
+					},
+					"name": "ProductData"
+				}
+			],
+			"sinks": [
+				{
+					"dataset": {
+						"referenceName": "BlobDestinationDataSet",
+						"type": "DatasetReference"
+					},
+					"name": "ProfitCol"
+				}
+			],
+			"transformations": [
+				{
+					"name": "ProfitDerivedColumn1"
+				}
+			],
+			"script": "source(output(\n\t\tProductID as integer,\n\t\tName as string,\n\t\tColor as string,\n\t\tListPrice as decimal(19,4),\n\t\tStandardCost as decimal(19,4)\n\t),\n\tallowSchemaDrift: true,\n\tvalidateSchema: false,\n\tisolationLevel: 'READ_UNCOMMITTED',\n\tquery: 'select ProductID, Name, Color, ListPrice, StandardCost from [SalesLT].[Product]',\n\tformat: 'query') ~> ProductData\nProductData derive(Profit = ListPrice-StandardCost) ~> ProfitDerivedColumn1\nProfitDerivedColumn1 sink(allowSchemaDrift: true,\n\tvalidateSchema: false,\n\tskipDuplicateMapInputs: true,\n\tskipDuplicateMapOutputs: true) ~> ProfitCol"
+		}
+	}
+}
