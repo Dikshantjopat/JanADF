@@ -612,7 +612,8 @@
 											"partitionOption": "None"
 										},
 										"sink": {
-											"type": "AzureSqlSink"
+											"type": "AzureSqlSink",
+											"tableOption": "autoCreate"
 										},
 										"enableStaging": false,
 										"translator": {
