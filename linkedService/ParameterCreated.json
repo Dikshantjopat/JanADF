@@ -1,0 +1,29 @@
+{
+	"name": "ParameterCreated",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"parameters": {
+			"Server Name": {
+				"type": "string",
+				"defaultValue": "demoltiserver.database.windows.net"
+			},
+			"Database Name": {
+				"type": "string",
+				"defaultValue": "SampleDB"
+			},
+			"UserName": {
+				"type": "string",
+				"defaultValue": "sqladmin"
+			},
+			"Password": {
+				"type": "string",
+				"defaultValue": "training123$"
+			}
+		},
+		"annotations": [],
+		"type": "AzureSqlDatabase",
+		"typeProperties": {
+			"connectionString": "Integrated Security=False;Encrypt=True;Connection Timeout=30;Data Source=\"@{linkedService().Server Name}\";Initial Catalog=\"@{linkedService().Database Name}\";User ID=@{linkedService().UserName};Password=@{linkedService().Password}"
+		}
+	}
+}
