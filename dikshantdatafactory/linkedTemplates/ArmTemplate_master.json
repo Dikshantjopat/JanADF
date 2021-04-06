@@ -67,6 +67,10 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'DikshantLinked'"
 		},
+		"ParameterCreated_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'ParameterCreated'"
+		},
 		"SqlServer1_connectionString": {
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'SqlServer1'"
@@ -152,6 +156,9 @@
 					},
 					"DikshantLinked_connectionString": {
 						"value": "[parameters('DikshantLinked_connectionString')]"
+					},
+					"ParameterCreated_connectionString": {
+						"value": "[parameters('ParameterCreated_connectionString')]"
 					},
 					"AzureDataLakeStorageLS_properties_typeProperties_url": {
 						"value": "[parameters('AzureDataLakeStorageLS_properties_typeProperties_url')]"
