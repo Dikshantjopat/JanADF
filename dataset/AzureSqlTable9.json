@@ -1,0 +1,18 @@
+{
+	"name": "AzureSqlTable9",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ParameterCreated",
+			"type": "LinkedServiceReference",
+			"parameters": {
+				"Server Name": "demoltiserver.database.windows.net",
+				"Database Name": "SampleDB",
+				"UserName": "sqladmin",
+				"Password": "training123$"
+			}
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": []
+	}
+}
