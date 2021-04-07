@@ -1,0 +1,29 @@
+{
+	"name": "AzureSqlDatabaseEmptyDBLS",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"parameters": {
+			"Server name": {
+				"type": "string",
+				"defaultValue": "demoltiserver.database.windows.net"
+			},
+			"Database Name": {
+				"type": "string",
+				"defaultValue": "EmptyDB"
+			},
+			"User name": {
+				"type": "string",
+				"defaultValue": "sqladmin"
+			},
+			"Password": {
+				"type": "string",
+				"defaultValue": "training123$"
+			}
+		},
+		"annotations": [],
+		"type": "AzureSqlDatabase",
+		"typeProperties": {
+			"connectionString": "Integrated Security=False;Encrypt=True;Connection Timeout=30;Data Source=\"@{linkedService().Server name}\";Initial Catalog=\"@{linkedService().Database Name}\";User ID=\"@{linkedService().User name}\";Password=@{linkedService().Password}"
+		}
+	}
+}
